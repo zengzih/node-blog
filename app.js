@@ -1,6 +1,14 @@
 const express = require('express');
+// const mysql = require('mysql');
 // 创建app应用 == Node.js 中的http.createServer();
 const app = express();
+
+// 链接mongooes数据库
+const mongooes = require('mongoose');
+const bodyParse = require('body-parser');
+
+// 记载cookies模块
+const Cookies = require('cookies');
 
 
 // 模板的使用：后端逻辑和表现分离-前后端分离
@@ -19,15 +27,28 @@ app.set('views', './views')
 app.set('view engine', 'html');
 
 swig.setDefaults({ cache: false }); // 在开发过程中，需要取消模板缓存。
-
+app.use(bodyParse.urlencoded({ extended: true }));
 
 // 使用express静态文件托管
 // 当用户请求的文件的路径是以./public开始的，则调用后面的方式来进行处理（对 __dirname + '/public' 下的文件进行处理）,
 app.use('/public', express.static(__dirname + '/public'));
 
+// 设置cookie
+app.use((req, res, next)=> { //  当用户访问时会走这里
+  req.cookies = new Cookies(req, res); // 设置和获取cookie
+  const cookie = req.cookies.get('userInfo');
+  req.userInfo = {};
+  if (cookie) {
+    try {
+      req.userInfo = JSON.parse(cookie); // 解析登录用户的cookie信息
+    }catch (e) {
+      console.log(e);
+    }
+  }
+  
+  next();
+});
 
-// 监听http请求     
-app.listen(8088, 'localhost');
 
 /*
 * 用户发送http请求——> url ——> 解析路由 ——> 找到匹配的规则 ——> 执行指定的绑定函数，返回内容给用户。
@@ -40,7 +61,24 @@ app.listen(8088, 'localhost');
 // 分模块来进行开发，根据不同的功能，划分模块。
 app.use('/admin', require('./routers/admin'));
 app.use('/api', require('./routers/api'));
-// app.use('/admin', require('./routers/admin'));
+app.use('/', require('./routers/main'));
+
+app.listen(8088, 'localhost');
+// 链接数据库
+/*
+mongooes.connect('mongodb://localhost:27017/node-blog', (err)=> {
+  if (!err){
+    console.log('---链接成功---');
+    // 监听http请求
+    app.listen(8088, 'localhost');
+  } else {
+    console.log('---链接失败---');
+  }
+});
+*/
+
+
+
 
 
 

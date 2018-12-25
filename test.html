@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    const p = new Promise((resolve, reject)=> {
+        resolve('1', '2');
+    });
+    p.then((a, b)=> {
+      console.log(a)
+      console.log(b);
+    });
+
+    const arr = ['aa=?'];
+    console.log(arr.join(' and '));
+</script>
+</html>
