@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444081af-8030-4acb-879e-7b1260f0de1e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/highlight.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/markdown-editor-shell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/marked.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/tools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/category_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/content_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/content_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/content_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/user_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/main/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -113,8 +85,8 @@
       <file leaf-file-name="admin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routers/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="192">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -330,10 +302,18 @@
       <workItem from="1545552350635" duration="549000" />
       <workItem from="1545584212454" duration="6352000" />
     </task>
+    <task id="LOCAL-00001" summary="admin">
+      <created>1546444153347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546444153347</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61838000" />
+    <option name="totallyTimeSpent" value="62933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,14 +328,14 @@
     <frame x="0" y="23" width="1440" height="804" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16701902" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16701902" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3281471" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3281471" />
       <window_info anchor="bottom" id="RNConsole" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
@@ -404,6 +384,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,8 +694,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routers/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="192">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>

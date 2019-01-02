@@ -12,17 +12,19 @@ router.get('/user', (req, res, next)=> {
     const { result: count } = data;
     const limit = 2;
     let pages = 0; // 总页数
-    const page = Number(req.query.page) || 1;
+    let page = Number(req.query.page) || 1;
+    // 计算总页数
+    pages = Math.ceil(count / limit);
+    // 取值不能超过pages
+    page = Math.min(page, pages);
+    // 取值不能小于1
+    page = Math.max(page, 1);
     db.commit({
       type: 'query',
       limit: ' '+ ((page - 1) * limit) + ',' + ((page - 1) * limit + limit) +' ',
       table: 'user'
     }).then((data)=> {
       const { result } = data;
-      // 计算总页数
-      debugger;
-      console.log();
-      pages = Math.ceil(count / limit);
       res.render('admin/user_index', {
         userInfo: req.userInfo,
         users: result,
