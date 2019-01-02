@@ -70,7 +70,8 @@ router.post('/user/login', (req, res, next)=> {
       responseData.message = '登录成功';
       responseData.userInfo = {
           _id: args.result[0].ID,
-        username: args.result[0].USERNAME
+        username: args.result[0].USERNAME,
+        isAdmin: args.result[0].isAdmin
       };
       req.cookies.set('userInfo', JSON.stringify(responseData.userInfo));
       res.json(responseData);
@@ -87,7 +88,7 @@ router.post('/user/login', (req, res, next)=> {
 });
 
 // 退出
-router.get('user/logout', (req, res)=> {
+router.get('/user/logout', (req, res)=> {
   req.cookies.set('userInfo', null);
   res.json(responseData);
 });

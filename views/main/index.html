@@ -110,9 +110,14 @@
       <p><span class="colDark username">
           {{ userInfo.username }}
       </span></p>
-
-      <p><span class="colDanger info">你好，欢迎光临我的博！<a href="/admin">你可以点击这里进入管理</a></span></p>
-
+        {% if userInfo.isAdmin %}
+        <p>
+            <span class="colDanger info">你好，管理员！</span>
+            <a href="/admin">进入管理</a>
+        </p>
+        {% else %}
+        <p><span class="colDanger info">你好，欢迎光临我的博！<a href="/admin">你可以点击这里进入管理</a></span></p>
+        {% endif %}
       <p><span class="colDark logout"><a href="javascript:void(0)">退出</a></span></p>
     </div>
     {% else %}

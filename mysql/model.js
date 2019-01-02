@@ -22,11 +22,17 @@ class UseDB {
         });
       },
       query(args = {}) {
-        let {table, select, where} = args;
+        let {table, select, where, limit, count} = args; // limit：分页
         if (select) {
           select = `select ${select.join(',')} from ${tables[table]} `;
         } else {
-          select = `select * from ${tables[table]} `;
+          select = `select * from ${tables[table]}`;
+        }
+        if (limit) {
+          select += ` limit ${limit}`;
+        }
+        if (count) {
+          select = `select count(*) from ${tables[table]}`;
         }
         const field = [],
               values = [];
@@ -35,12 +41,18 @@ class UseDB {
           field.push(""+key+"=?");
           values.push(where[key]);
         });
-        let sql = select + `where ${field.join(' and ')}`;
+        let sql = select;
+        if (field.length) {
+          sql = select + `where ${field.join(' and ')}`;
+        }
         return new Promise((resolve, reject)=> {
           connection.query(sql, values, (err, result, fields)=> {
             if (err) {
               reject(err);
             } else {
+              if (count) {
+                result = result[0]['count(*)'];
+              }
               resolve({err, result, fields});
             }
           })

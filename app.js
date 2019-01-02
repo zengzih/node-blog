@@ -1,4 +1,5 @@
 const express = require('express');
+const childProcess = require('child_process');
 // const mysql = require('mysql');
 // 创建app应用 == Node.js 中的http.createServer();
 const app = express();
@@ -64,6 +65,8 @@ app.use('/api', require('./routers/api'));
 app.use('/', require('./routers/main'));
 
 app.listen(8088, 'localhost');
+
+childProcess.exec('open http://localhost:8088/');
 // 链接数据库
 /*
 mongooes.connect('mongodb://localhost:27017/node-blog', (err)=> {
